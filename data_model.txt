@@ -1,0 +1,11 @@
+User
+  id: integer [primary key]
+  name: string [present, 50 max chars]
+  email: string [present, 255 max chars, unique(case insensitive)]
+  password_digest: string
+  member: boolean [default=false]
+  created_at: datetime
+  updated_at: datetime
+  virtual attributes created by has_secure_password:
+    password:              string [present, 6-16 chars]
+    password_confirmation: string [present, 6-16 chars]
