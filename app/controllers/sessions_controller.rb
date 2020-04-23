@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       flash[:success] = 'Successfully logged in'
       redirect_to @user
     else
-      redirect_to login_path
+      flash.now[:danger] = 'Invalid email/password combination'
+      render 'new'
     end
   end
 
