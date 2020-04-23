@@ -1,0 +1,9 @@
+<div class="card border-dark mb-4">
+  <% if logged_in? %>
+    <div class="card-header"><%= post.user.name %></div>
+  <% end %>
+  <div class="card-body text-dark">
+    <p class="card-title h3"><%= post.title %></p>
+    <p class="card-text"><%= post.body %></p>
+  </div>
+</div>

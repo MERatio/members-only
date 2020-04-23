@@ -45,6 +45,10 @@ gem 'bootstrap', '~> 4.4.1'
 
 gem 'jquery-rails'
 
+gem 'bootstrap-will_paginate', '1.0.0'
+
+gem 'will_paginate',           '3.1.6'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'

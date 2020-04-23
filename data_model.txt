@@ -9,3 +9,15 @@ User
   virtual attributes created by has_secure_password:
     password:              string [present, 6-16 chars]
     password_confirmation: string [present, 6-16 chars]
+
+  has_many :posts
+
+Post
+  id: integer [primary key]
+  title: text [present, 300 max chars]
+  body: text [present, 40,000 max chars]
+  created_at: datetime
+  updated_at: datetime
+
+  belongs_to :user
+    user_id: integer [present]
